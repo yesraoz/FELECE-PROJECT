@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esra Öz</title>
+    <link href="css/styles.css" rel="stylesheet/less" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="top-nav-bar" id="top-nav-bar">
+        <div class="row top-header">
+            <div class="col-1"><label class="pl-2" for="btn-menu" onclick="hideNav()"><i id="icon2"
+                        class="fas fa-arrow-left"></i></label></div>
+            <div class="col-2 top-logo" id="top-logo">
+                <h1 id="detay-Logo">LOGO</h1>
+                <h1 id="detay-Title">Kadın</h1>
+            </div>
+            <div class="col-11" id="menu-input">
+                <div class="input-group">
+                    <input type="text" onfocus="txtFocus()" onFocusout="txtFocusoff()" class="form-control"
+                        id="txtSearch" placeholder="blablabla.com'da ara"
+                        aria-label="Username" aria-describedby="eklenti">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1" id="iconsearchBox"><label for="btn-menu" onclick="showSearch()"><i id="iconSearch"
+                        class="fas fa-search"></i></i></label></div>
+        </div>
+        <div class="row top-bottomheader" id="top-bottomheader">
+            <div class="col d-flex">
+                <div class="pr-2 d-flex"><a href="#"><i class="far fa-user fa-lg"></i></a></div>
+                <div><a href="#">
+                        <h1>Üye Ol</h1>
+                    </a></div>
+                <div>
+                    <h1>&nbsp; | &nbsp; </h1>
+                </div>
+                <div><a href="#">
+                        <h1>Giriş Yap</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="pr-2 d-flex"><a href="#"><i class="fas fa-truck"></i></i></a></div>
+                <div><a href="#">
+                        <h1>SİPARİŞ TAKİP</h1>
+                    </a></div>
+            </div>
+
+
+        </div>
+        <div class="row last-searches" id="last-searches">
+            <div class="col-md">
+                <h1>Son Arananlar</h1>
+            </div>
+            <div class="col-md box-searches">
+                <h1>Sweatshirt</h1><i class="fas fa-trash-alt i-padding"></i>
+            </div>
+            <div class="col-md box-searches">
+                <h1>Jean</h1><i class="fas fa-trash-alt i-padding"></i>
+            </div>
+            <div class="col-md box-searches">
+                <h1>Kaban</h1><i class="fas fa-trash-alt i-padding"></i>
+            </div>
+        </div>
+        <div class="row surf-menu" id="surf-menu">
+            <div class="col-md box-menu" id="Kadın" onclick="showDetay(this)">
+                <h1>Kadın</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+            <div class="col-md box-menu" id="Erkek" onclick="showDetay(this)">
+                <h1>Erkek</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+            <div class="col-md box-menu" id="Çocuk" onclick="showDetay(this)">
+                <h1>Çocuk</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+            <div class="col-md box-menu" id="exit" onclick="exit()">
+                <h1 style="color: red;">Çıkış</h1>
+            </div>
+        </div>
+
+        <div class="row menu-detay" id="menu-detay">
+            <div class="scrollmenu">
+                <img src="images/7.jpg" alt="1">
+                <img src="images/yeni-gelenler@2x.jpg" alt="1">
+                <img src="images/indirim@2x.jpg" alt="1">
+                <img src="images/yeni-gelenler@2x.jpg" alt="1">
+                <img src="images/indirim@2x.jpg" alt="1">
+            </div>
+            <div class="col-md box-menu" id="kadın">
+                <h1>Kazak</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+            <div class="col-md box-menu" id="erkek">
+                <h1>Pantolon</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+            <div class="col-md box-menu" id="cocuk">
+                <h1>Ayakkabı</h1><i class="fas fa-arrow-right i-padding"></i>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="home" id="home">
+        <div class="topcont">
+            <div class="container">
+                <div class="box float-left topcont-link "><a href="#">
+                        <h1>Üye Ol</h1>
+                    </a></div>
+                <div class="box float-left topcont-link ">
+                    <h1>&nbsp; | &nbsp; </h1>
+                </div>
+                <div class="box float-left topcont-link "><a href="#">
+                        <h1>Giriş Yap</h1>
+                    </a></div>
+                <div class="box float-right"><a href="#">
+                        <h1>SİPARİŞ TAKİP</h1>
+                    </a></div>
+            </div>
+        </div>
+        <div class="container">
+            <header>
+                <div class="row cont-top">
+                    <div class="col" id="btn-menu">
+                        <label for="btn-menu" onclick="showNav()"><i id="icon1" class="fa fa-bars"
+                                aria-hidden="true"></i></label>
+                    </div>
+                    <div class="col logo">
+                        <h1>LOGO</h1>
+                    </div>
+                    <div class="col-6 col-buton">
+                        <div class="input-group">
+                            <input type="text" class="form-control"
+                                placeholder="blablabla.com'da ara"
+                                aria-label="Username" aria-describedby="eklenti">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row mt-0 resp-row">
+                            <div class="col cont-top-right show1">
+                                <div class="col-md d-flex align "><a href="#"><i class="far fa-user fa-lg"></i></a>
+                                </div>
+                                <div class="col-md d-flex align"><a href="#">
+                                        <h7>Giriş Yap</h7>
+                                    </a> </div>
+                            </div>
+                            <div class="col cont-top-right">
+                                <div class="col-md d-flex align"><a href="#"><i class="far fa-heart fa-lg"></i></a><span
+                                        class="badge badge-pill badge-primary">0</span></div>
+                                <div class="col-md d-flex align"><a href="#">
+                                        <h7>Favori Listem</h7>
+                                    </a> </div>
+                            </div>
+                            <div class="col cont-top-right">
+                                <div class="col d-flex flex-row align"><a href="#"><i
+                                            class="fas fa-shopping-bag fa-lg"></i></a><span
+                                        class="badge badge-pill badge-primary">0</span></div>
+                                <div class="col-md d-flex align"><a href="#">
+                                        <h7>Sepetim</h7>
+                                    </a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cont-top" id="responsive-input">
+                    <div class="col col-buton2">
+                        <div class="input-group">
+                            <input type="text" class="form-control"
+                                placeholder="blablabla.com'da ara"
+                                aria-label="Username" aria-describedby="eklenti">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"><i
+                                        class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="nav-menu">
+                    <div class="col p-0 navbar">
+                        <div class="navbar p-0">
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="myFunction()">Kadın
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Giyim </button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">T-shirt</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Dış Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Palto</button>
+                                            <button class="btn btn-alert border-0">Trençkot</button>
+                                            <button class="btn btn-alert border-0">Kaban</button>
+
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Aksesuar</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Küpe</button>
+                                            <button class="btn btn-alert border-0">Kolye</button>
+                                            <button class="btn btn-alert border-0">Şal</button>
+                                            <button class="btn btn-alert border-0">Bere</button>
+                                            <button class="btn btn-alert border-0">Bileklik</button>
+                                            <button class="btn btn-alert border-0">Atkı</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Çizme</button>
+                                            <button class="btn btn-alert border-0">Bot</button>
+                                            <button class="btn btn-alert border-0">Sneaker</button>
+                                            <button class="btn btn-alert border-0">Topuklu</button>
+                                            <button class="btn btn-alert border-0">Sandalet</button>
+                                            <button class="btn btn-alert border-0">Terlik</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="myFunction()">Erkek
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Jeans</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Dış Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Palto</button>
+                                            <button class="btn btn-alert border-0">Trençkot</button>
+                                            <button class="btn btn-alert border-0">Kaban</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Aksesuar</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Bere</button>
+                                            <button class="btn btn-alert border-0">Atkı</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Bot</button>
+                                            <button class="btn btn-alert border-0">Sneaker</button>
+                                            <button class="btn btn-alert border-0">Sandalet</button>
+                                            <button class="btn btn-alert border-0">Terlik</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="myFunction()">Çocuk
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Tişört</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Dış Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Palto</button>
+                                            <button class="btn btn-alert border-0">Trençkot</button>
+                                            <button class="btn btn-alert border-0">Kaban</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Aksesuar</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Küpe</button>
+                                            <button class="btn btn-alert border-0">Kolye</button>
+                                            <button class="btn btn-alert border-0">Şal</button>
+                                            <button class="btn btn-alert border-0">Bere</button>
+                                            <button class="btn btn-alert border-0">Bileklik</button>
+                                            <button class="btn btn-alert border-0">Atkı</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Bot</button>
+                                            <button class="btn btn-alert border-0">Sneaker</button>
+                                            <button class="btn btn-alert border-0">Sandalet</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn" onclick="myFunction()">Bebek
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Kadın</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">T-shirt</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Erkek</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Jeans</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Çocuk</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Tişört</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Bebek</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">T-shirt</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn" id="outlet" onclick="myFunction()">Outlet
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                            <button class="btn btn-alert border-0">T-shirt</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Dış Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Palto</button>
+                                            <button class="btn btn-alert border-0">Trençkot</button>
+                                            <button class="btn btn-alert border-0">Kaban</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Aksesuar</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Küpe</button>
+                                            <button class="btn btn-alert border-0">Kolye</button>
+                                            <button class="btn btn-alert border-0">Şal</button>
+                                            <button class="btn btn-alert border-0">Bere</button>
+                                            <button class="btn btn-alert border-0">Bileklik</button>
+                                            <button class="btn btn-alert border-0">Atkı</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Çizme</button>
+                                            <button class="btn btn-alert border-0">Bot</button>
+                                            <button class="btn btn-alert border-0">Sneaker</button>
+                                            <button class="btn btn-alert border-0">Topuklu</button>
+                                            <button class="btn btn-alert border-0">Sandalet</button>
+                                            <button class="btn btn-alert border-0">Terlik</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="dropdown">
+                                <button class="dropbtn" id="outlet" onclick="myFunction()">Outlet
+                                </button>
+                                <div class="dropdown-content" id="myDropdown">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Kazak</button>
+                                            <button class="btn btn-alert border-0">Pantolon</button>
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Gömlek</button>
+                                            <button class="btn btn-alert border-0">T-shirt</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Dış Giyim</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Mont</button>
+                                            <button class="btn btn-alert border-0">Palto</button>
+                                            <button class="btn btn-alert border-0">Trençkot</button>
+                                            <button class="btn btn-alert border-0">Kaban</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Aksesuar</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Küpe</button>
+                                            <button class="btn btn-alert border-0">Kolye</button>
+                                            <button class="btn btn-alert border-0">Şal</button>
+                                            <button class="btn btn-alert border-0">Bere</button>
+                                            <button class="btn btn-alert border-0">Bileklik</button>
+                                            <button class="btn btn-alert border-0">Atkı</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-alert border-0">Ayakkabı</button>
+                                            <div class="dropdown-divider"></div>
+                                            <button class="btn btn-alert border-0">Çizme</button>
+                                            <button class="btn btn-alert border-0">Bot</button>
+                                            <button class="btn btn-alert border-0">Sneaker</button>
+                                            <button class="btn btn-alert border-0">Topuklu</button>
+                                            <button class="btn btn-alert border-0">Sandalet</button>
+                                            <button class="btn btn-alert border-0">Terlik</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main id="cont-main">
+                <div class="container">
+                    <div class="row">
+                        <img class="img-banner" src="images/USTBANNER_WEB@2x.jpg">
+                    </div>
+                    <div class="row cont-banners">
+                        <div class="col pl-0"><img class="img-banner" src="images/7.jpg"></div>
+                        <div class="col pr-0"><img class="img-banner" src="images/5.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div id="slider">
+                            <div class="slider"><img src="images/1.jpg" alt="" /></div>
+                            <div class="slider"><img src="images/3.jpg" alt="" /></div>
+                            <div id="kontrol">
+                                <button id="btn-surf" onclick="prev()"> </button>
+                                <button id="btn-surf2" onclick="next()"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+            </footer>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+</body>
+</html>

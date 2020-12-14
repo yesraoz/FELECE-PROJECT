@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: f1f3f4;
+    font-family: sans-serif;
+}
+.top-nav-bar{
+    height:57px;
+    top:0;
+    position: sticky;
+    background: #fff;
+    margin-bottom: 20px;
+    border-bottom: 3px solid blue;
+    z-index: 2;
+}
+.logo{
+    height: 40px;
+    margin: 5px 10px;
+}
+.form-control{
+    margin-top: 9px;
+    margin-left: 30px;
+    border: 1px solid gray !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    box-shadow: none !important;
+}
+.input-group-text{
+    background:#fff;
+    border:1px solid #fff;
+    margin:8.5px 10px 3px 0;
+    border-top-left-radius: 0 px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+.search-box{
+    display: inline-flex;
+    width:60%;
+}
+.fa-search{
+color:#999;
+}
+.login-bar{
+    width:40%;
+    height:57px;
+    float: right;
+}
+.login-bar ul{
+    display: inline-flex;
+    float: right;
+}
+.login-bar ul li{
+    border-left: 1px solid #fff;
+    list-style-type: none;
+    padding: 15px 35px;
+    text-align: center;
+    background-color:#fff;
+    cursor: pointer;
+}
+a {
+    color: gray;
+    text-decoration: none;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.side-menu{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-menu ul{
+    font-size: 14px;
+    padding: 3vw 1vh;
+    display: inline-flex;
+    list-style-type: none;   
+}
+.side-menu ul li{
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 12px;
+
+}
+.side-menu ul li:hover{
+    color: blue;
+}
+.side-menu ul li  ul{
+    display: none;
+    color: gray;
+}
+.side-menu ul li:hover  ul{
+display: block;
+height:400px;
+margin-bottom: 14%;
+padding: 0;
+position:fixed;
+background: #fff;
+box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+
+/* --------- slider CSS -------->*/
+.slider{
+    width: 85%;
+    padding:0 10px;
+}
+
+.carousel{
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
